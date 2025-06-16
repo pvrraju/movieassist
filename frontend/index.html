@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Assist - Your Personal Recommendation Engine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">MOVIE ASSIST</div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Find Your Next Favorite Movie</h1>
+                <p>Tell us what you're looking for, and our AI will find the perfect match.</p>
+                <form id="recommendation-form">
+                    <div class="input-group">
+                        <label for="user-mood">How are you feeling?</label>
+                        <input type="text" id="user-mood" name="user-mood" placeholder="e.g., adventurous, happy, thoughtful" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="past-movies">What are some movies you've enjoyed recently?</label>
+                        <input type="text" id="past-movies" name="past-movies" placeholder="e.g., Inception, The Matrix, Superbad">
+                    </div>
+                    <div class="input-group">
+                        <label for="user-request">Any specific requests?</label>
+                        <input type="text" id="user-request" name="user-request" placeholder="e.g., a sci-fi with a strong female lead" required>
+                    </div>
+                    <button type="submit" class="cta-button">Get Recommendations</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="results-section" class="results-section hidden">
+            <h2>Your AI-Powered Recommendations</h2>
+            <div id="loader" class="loader-container hidden">
+                <div class="loader"></div>
+                <p>Analyzing your request and finding the best movies...</p>
+            </div>
+            <div id="recommendations" class="recommendations-container"></div>
+            <div id="error" class="error-message hidden"></div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>Powered by AI. Built for movie lovers.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
