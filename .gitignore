@@ -1,0 +1,19 @@
+# Environments
+env-for-recom/
+movieassist_env/
+
+# Data
+data/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Docker
+docker/build/
+docker/dist/
+docker/target/
+
+# Notebooks
+.ipynb_checkpoints 

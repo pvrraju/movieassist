@@ -1,0 +1,188 @@
+:root {
+    --primary-red: #E50914;
+    --dark-grey: #141414;
+    --medium-grey: #222;
+    --light-grey: #333;
+    --text-color: #ffffff;
+    --text-secondary: #8c8c8c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-grey);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.main-header, .main-footer {
+    padding: 1rem 3rem;
+    background-color: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    z-index: 10;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    letter-spacing: 1px;
+}
+
+.main-content {
+    padding-top: 80px; /* Space for fixed header */
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0) 100%), url('https://i.imgur.com/XyqQZ8p.jpg') no-repeat center center/cover;
+}
+
+.hero-content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 3rem;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+#recommendation-form .input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+#recommendation-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+#recommendation-form input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--light-grey);
+    border: 1px solid var(--text-secondary);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+#recommendation-form input::placeholder {
+    color: #666;
+}
+
+.cta-button {
+    background-color: var(--primary-red);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background-color: #f40612;
+}
+
+.results-section {
+    padding: 3rem;
+    text-align: center;
+}
+
+.results-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.recommendations-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.recommendation-item {
+    background-color: var(--medium-grey);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-red);
+}
+
+.recommendation-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-red);
+}
+
+.main-footer {
+    text-align: center;
+    padding: 1.5rem 3rem;
+    color: var(--text-secondary);
+    margin-top: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Loader animation */
+.loader-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.loader {
+    border: 5px solid var(--light-grey);
+    border-top: 5px solid var(--primary-red);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error message styling */
+.error-message {
+    background-color: #58151c;
+    color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
